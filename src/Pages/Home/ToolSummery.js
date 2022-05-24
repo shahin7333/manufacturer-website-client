@@ -2,7 +2,7 @@ import React from 'react';
 
 const ToolSummery = () => {
     return (
-        <div className="hero min-h-screen ">
+        <div className="hero min-h-screen mt-5">
   <div className="hero-content flex-col lg:flex-row">
     <img src="https://i.ibb.co/gjZMdN8/about.png" className=" rounded-bl-lg shadow-sm" alt='' />
     <div>
