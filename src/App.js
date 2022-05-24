@@ -9,6 +9,7 @@ import Home from './Pages/Home/Home';
 import Navbar from './Pages/Shared/Navbar';
 import Reviews from './Pages/Reviews';
 import About from './Pages/About';
+import Footer from './Pages/Shared/Footer';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
   </Routes>
   
   
-  
+  <Footer/>
     </div>
   );
 }
