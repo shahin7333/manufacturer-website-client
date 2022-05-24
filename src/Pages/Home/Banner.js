@@ -8,7 +8,7 @@ const Banner = () => {
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">ELECTRICAL SPARK</h1>
             <p className="mb-5">Electrical tools are tools used to work on an electrical system. These can include a wide range of tools such as wire and cable cutters, wire strippers, coaxial compression tools, telephony tools, wire cutter/strippers, cable tie tools, accessories, and even more.</p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn border-0 bg-gradient-to-r from-primary to-secondary text-white font-bold">Get Started</button>
           </div>
         </div>
       </div>

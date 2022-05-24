@@ -1,0 +1,56 @@
+[
+    {
+        "_id":1,
+        "img":"https://i.ibb.co/pZmW35N/hammer.png",
+        "name":"Hammer",
+        "description":"A hammer is a tool, most often a hand tool, consisting of a weighted 'head' fixed to a long handle that is swung to deliver an impact to a small area of an object.",
+        "minOrder":"500",
+        "available":"12000",
+        "price":"$32"
+    },
+    {
+        "_id":2,
+        "img":"https://i.ibb.co/f9HwJsy/wire-stripper.png",
+        "name":"Wire Stripper",
+        "description":"A wire stripper is a portable handheld tool used by workers, especially electricians, for removing the protective coating of an electric wire in order to replace.",
+        "minOrder":"600",
+        "available":"17000",
+        "price":"$39"
+    },
+    {
+        "_id":3,
+        "img":"https://i.ibb.co/3mPDTFk/cable-tie-tool.png",
+        "name":"Cable Tie",
+        "description":"A cable tie (also known as a hose tie, zip tie, or tie wrap) is a type of fastener, for holding items together, primarily electrical cables, and wires application.",
+        "minOrder":"10000",
+        "available":"110000",
+        "price":"$0.50"
+    },
+    {
+        "_id":4,
+        "img":"https://i.ibb.co/T2ZVy4D/wire-crimper.png",
+        "name":"Wire Crimper",
+        "description":"To use this crimping tool, each wire is first placed into the connector. Then, the connector with wires are placed into the crimping tool, and the handles.",
+        "minOrder":"700",
+        "available":"16000",
+        "price":"$57"
+    },
+    {
+        "_id":5,
+        "img":"https://i.ibb.co/5rn08mw/wire-cutter.png",
+        "name":"Wire Cutter",
+        "description":"Wire cutters are commonly used to cut copper, brass, iron, aluminum, and steel wire. Some wire cutters have insulated handles  which ensure that you'll not get shocked.",
+        "minOrder":"650",
+        "available":"21000",
+        "price":"$65"
+    },
+    {
+        "_id":6,
+        "img":"https://i.ibb.co/kQ4MWf5/multimeter.png",
+        "name":"Hammer",
+        "description":"Multimeter. A multimeter or a multitester, also known as a volt/ohm meter, is an electronic measuring instrument that combines several measurement functions in unit.",
+        "minOrder":"400",
+        "available":"19000",
+        "price":"$150"
+    }
+]
