@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Tool = ({tool,setPurchases}) => {
-//   let Navigate =useNavigate();
-// const setPurchases =  () =>{
-//     Navigate("/purchase")
-//    }
+const Tool = ({tool}) => {
+
     const {img,name,description,minOrder,available,price,_id}=tool
+    const navigate=useNavigate()
+    const navigateToPurchase=_id=>{
+            navigate(`/purchase/${_id}`)
+    }
     return (
         <div className="card card-compact bg-base-100 shadow-xl">
   <figure><img src={img} alt="Shoes" /></figure>
@@ -19,7 +20,7 @@ const Tool = ({tool,setPurchases}) => {
     <p className='font-bold'>Price: <span className='text-secondary'>{price}</span></p>
     
     <div className="card-actions justify-start">
-    <label htmlFor="purchase-modal"   onClick={()=>setPurchases(tool)} className="btn border-0 bg-gradient-to-r from-primary to-secondary text-white font-bold uppercase">Purchase</label>
+    <button onClick={()=>navigateToPurchase(_id)} className="btn border-0 bg-gradient-to-r from-primary to-secondary text-white font-bold uppercase">Purchase</button>
     </div>
   </div>
 </div>

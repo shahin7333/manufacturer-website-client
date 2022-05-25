@@ -5,10 +5,13 @@ import Blogs from './Pages/Blogs';
 import Login from "../src/Pages/Login/Login"
 import Home from './Pages/Home/Home';
 import Navbar from './Pages/Shared/Navbar';
-import Reviews from './Pages/Reviews';
 import About from './Pages/About';
 import Footer from './Pages/Shared/Footer';
 import SignUp from './Pages/Login/SignUp';
+import Purchase from './Pages/Purchase/Purchase';
+import Reviews from './Pages/Home/Reviews';
+import NotFound from './Pages/Shared/NotFound';
+import RequirAuth from './Pages/Login/RequirAuth';
 
 function App() {
   return (
@@ -21,6 +24,12 @@ function App() {
     <Route path='/reviews' element={<Reviews/>} />
     <Route path='/about' element={<About/>} />
     <Route path='/signup' element={<SignUp/>}/>
+    <Route path='/purchase/:purchaseId' element={
+      <RequirAuth>
+        <Purchase/>
+      </RequirAuth>
+    }/>
+     <Route path='*' element={<NotFound/>}/>
   </Routes>
   
   

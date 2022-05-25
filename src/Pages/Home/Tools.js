@@ -3,7 +3,6 @@ import Tool from './Tool';
 import Purchase from '../Purchase/Purchase'
 
 const Tools = () => {
-    const [purchases,setPurchases]=useState(null)
     const [tools,setTools]=useState([])
     useEffect(()=>{
         fetch('http://localhost:5000/tool')
@@ -18,11 +17,10 @@ const Tools = () => {
                  tools.map(tool=><Tool 
                  key={tool._id}
                  tool={tool}
-               setPurchases={setPurchases}
+              //  setPurchases={setPurchases}
                  ></Tool>)
                }
            </div>
-{purchases && <Purchase purchases={purchases} setPurchases={setPurchases}></Purchase>}
         </div>
     );
 };
