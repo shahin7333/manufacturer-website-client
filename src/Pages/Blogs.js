@@ -6,9 +6,9 @@ const Blogs = () => {
        <h1 className='text-center text-3xl text-secondary font-bold mt-20'>Questions-Answers Blog</h1>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-12">
         
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title text-secondary">
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title text-secondary">
               1. How will you improve the performance of a React Application?
             </h2>
             <p>
@@ -16,9 +16,9 @@ const Blogs = () => {
             </p>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title text-secondary">
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title text-secondary">
               2. What are the different ways to manage a state in a React application?
             </h2>
             <p>Based on these rules of each state, you can easily store data as per your needs wihtout worrying about creating a dynamic data mess.5 types of application state in React.
@@ -32,9 +32,9 @@ const Blogs = () => {
             </p>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title text-secondary">
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title text-secondary">
               3. How does prototypical inheritance work?
             </h2>
             <p>
@@ -43,9 +43,9 @@ const Blogs = () => {
             </p>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title text-secondary">
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title text-secondary">
               4. Why you do not set the state directly in React?
             </h2>
             <p>
@@ -53,9 +53,9 @@ const Blogs = () => {
             </p>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title text-secondary">
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title text-secondary">
               5.  How will you implement a search to find products by name?
             </h2>
             <p>To find the product by name of an array: 
@@ -66,9 +66,9 @@ const Blogs = () => {
             </p>
           </div>
         </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title text-secondary">
+        <div className="card bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title text-secondary">
               6. What is a unit test? Why should write unit tests?
             </h2>
             <p><span className='font-bold text-secondary'>Unit test:</span>This is a type of testing which is done by software developers in which the smallest testable module of an application like functions, procedures or interfaces.</p>
