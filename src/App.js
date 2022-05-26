@@ -19,6 +19,7 @@ import MyTools from './Pages/Dashboard/MyTools';
 import MyReview from './Pages/Dashboard/MyReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import AllUsers from './Pages/Dashboard/AllUsers';
+import MyPortfolio from './Portfolio/MyPortfolio';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
       <Route path='users' element={<AllUsers></AllUsers>}></Route>
     </Route>
      <Route path='*' element={<NotFound/>}/>
+     <Route path='/portfolio' element={<MyPortfolio/>}/>
   </Routes>
   
   <ToastContainer />

@@ -54,6 +54,11 @@ const Navbar = () => {
                 About
               </Link>
             </li>
+            <li>
+            <Link to="/portfolio" className="rounded-lg">
+              Portfolio
+            </Link>
+          </li>
            <li>
               {
               user && <Link to="/dashboard" className="rounded-lg">
@@ -114,6 +119,11 @@ const Navbar = () => {
           <li>
             <Link to="/about" className="rounded-lg">
               About
+            </Link>
+          </li>
+          <li>
+            <Link to="/portfolio" className="rounded-lg">
+              Portfolio
             </Link>
           </li>
           <li>
