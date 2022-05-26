@@ -4,19 +4,19 @@ import Loading from '../Shared/Loading';
 import User from './User';
 
 const AllUsers = () => {
-    const {data:users,isLoading}=useQuery('users',()=>fetch('http://localhost:5000/user').then(res=>res.json()))
+    const {data:users,isLoading,refetch}=useQuery('users',()=>fetch('http://localhost:5000/user').then(res=>res.json()))
     if(isLoading){
         return <Loading></Loading>
     }
     return (
         <div>
-            <h1>all users{users.length}</h1>
-            <div class="overflow-x-auto">
-  <table class="table w-full">
+            <h1 className='text-xl font-bold text-primary mb-2'>All users: {users.length}</h1>
+            <div className="overflow-x-auto">
+  <table className="table w-full">
     {/* <!-- head --> */}
     <thead>
       <tr className='text-center'>
-        <th></th>
+        
         <th>Email</th>
         <th>Make Adimin</th>
         <th>Remove User</th>
@@ -27,6 +27,7 @@ const AllUsers = () => {
         users.map(user=><User
         key={user._id}
         user={user}
+        refetch={refetch}
         ></User>)
       }
      

@@ -31,7 +31,7 @@ const MyTools = () => {
     },[user])
     return (
         <div>
-            <h1>my oreder{purchases.length}</h1>
+            <h1 className='text-xl font-bold text-primary mb-2'>my oreder:{purchases.length}</h1>
             <div className="overflow-x-auto">
   <table className="table w-full">
     {/* <!-- head --> */}
@@ -41,7 +41,7 @@ const MyTools = () => {
         <th>Name</th>
         <th>Address</th>
         <th>Quantity</th>
-        <th>Phone</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -50,9 +50,9 @@ const MyTools = () => {
             <tr className='text-center'>
             <th>{index+1}</th>
             <td>{p.customerName}</td>
-            <td>{p.address}</td>
             <td>{p.quantity}</td>
-            <td>{p.phone}</td>
+            <td>{p.address}</td>
+            <td><button class="btn btn-xs btn-outline">X</button></td>
             
           </tr>
             )
