@@ -30,6 +30,7 @@ const Purchase = () => {
     })
     .then(res=>res.json())
     .then(data=>{
+      console.log(data)
         if(data){
             toast('Your order is done')
         }
