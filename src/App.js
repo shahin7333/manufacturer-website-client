@@ -12,6 +12,9 @@ import Purchase from './Pages/Purchase/Purchase';
 import Reviews from './Pages/Home/Reviews';
 import NotFound from './Pages/Shared/NotFound';
 import RequirAuth from './Pages/Login/RequirAuth';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -29,10 +32,15 @@ function App() {
         <Purchase/>
       </RequirAuth>
     }/>
+    <Route path='/dashboard' element={
+      <RequirAuth>
+        <Dashboard/>
+      </RequirAuth>
+    }/>
      <Route path='*' element={<NotFound/>}/>
   </Routes>
   
-  
+  <ToastContainer />
   <Footer/>
     </div>
   );

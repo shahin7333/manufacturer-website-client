@@ -3,29 +3,51 @@ import { useParams } from 'react-router-dom'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init'
 import Quantity from './Quantity'
+import {toast } from 'react-toastify';
+
 
 const Purchase = () => {
   const { purchaseId } = useParams()
   const [user, loading, error] = useAuthState(auth)
 
-  const handlePurchase=e=>{
-    e.preventDefault();
-//    const phone=e.target.phone.value
-//    console.log(phone)
+  const handlePurchase = (e) => {
+    e.preventDefault()
+
+    const purchase = {
+      purchaseId: purchaseId,
+      customer: user.email,
+      customerName: user.displayName,
+      phone: e.target.phone.value,
+      address: e.target.address.value,
+      quantity: e.target.quantity.value,
+    }
+    fetch('http://localhost:5000/purchase',{
+        method: 'POST',
+        headers:{
+            'content-type':'application/json'
+        },
+        body: JSON.stringify(purchase)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        if(data){
+            toast('Your order is done')
+        }
+        else{
+            toast('Your order is failed')
+        }
+    })
   }
 
-  const purchase={
-      purchaseId:purchaseId,
-      customer:user.email,
-      customerName:user.displayName,
-    //   phone:e.target.phone.value
-  }
   return (
     <div>
       <h1 className="text-center text-4xl font-bold m-16 text-secondary">
         Fill up this form for your order
       </h1>
-      <form onSubmit={handlePurchase} className="grid grid-cols-1 gap-4 justify-items-center">
+      <form
+        onSubmit={handlePurchase}
+        className="grid grid-cols-1 gap-4 justify-items-center"
+      >
         <input
           type="text"
           disabled
@@ -45,6 +67,7 @@ const Purchase = () => {
           className="input input-bordered input-accent w-full max-w-xs"
         />
         <input
+        name="quantity"
           type="text"
           placeholder="Order Quantity"
           className="input input-bordered input-accent w-full max-w-xs"
@@ -56,6 +79,7 @@ const Purchase = () => {
           className="input input-bordered input-accent w-full max-w-xs"
         />
         <input
+          name="address"
           type="text"
           placeholder="Your Address"
           className="input input-bordered input-accent w-full max-w-xs"

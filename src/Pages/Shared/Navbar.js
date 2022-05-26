@@ -53,6 +53,13 @@ const Navbar = () => {
                 About
               </Link>
             </li>
+           <li>
+              {
+              user && <Link to="/dashboard" className="rounded-lg">
+              Dashboard
+            </Link>
+            }
+           </li>
             <li>
             {user ? (
               <h1 onClick={handleSignOut}>SignOut</h1>
@@ -90,6 +97,13 @@ const Navbar = () => {
               About
             </Link>
           </li>
+          <li>
+          {
+              user && <Link to="/dashboard" className=" rounded-lg">
+              Dashboard
+            </Link>
+            }
+            </li>
           <li>
             {user ? (
               <h1 onClick={handleSignOut}>SignOut</h1>
